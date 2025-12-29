@@ -7,6 +7,11 @@ char	*strrchr(const char *s, int c)
 
 	i = 0;
 	last = null;
-	
-
+	while (*s)
+	{
+		if (*s == c)
+			last = s;
+		*s++;
+	}
+	return (last);
 }
